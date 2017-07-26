@@ -19,9 +19,20 @@ get_header(); ?>
 	while ( have_posts() ) : the_post();
 
 		get_template_part( 'template-parts/content', 'page' );
-		
+		//Special for page "preparation": add slider, video container, help block
+		if (($post->post_name)== 'preparation'):
+			get_template_part('template-parts/content', 'preparation');
+		endif;
+		//Special for page "school_program": add slider, video container, help block
+		if (($post->post_name)== 'school_program'):
+			get_template_part('template-parts/content', 'program');
+		endif;
+		//Special for page "foreign": add slider, video container
+		if (($post->post_name)== 'foreign'):
+			get_template_part('template-parts/content', 'foreign');
+		endif;
 		// Special for page "school_travel" : add share links and comments
-		if (($post->post_name)== 'school_travel'):?>
+		 if (($post->post_name)== 'school_travel'):?>
 		<div class="share-block">
 		<?php get_template_part('template-parts/content', 'share');?>
 		</div>

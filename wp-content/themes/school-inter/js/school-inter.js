@@ -23,15 +23,15 @@ $(".news-filter[value=" + tag +"]").attr('checked', true);
 
 $(document).ready(function(){
   var maxSlides = 4;
-  var slideWidth = 200;
+  var slideWidth = 190;
   var moveSlides = 4;
   var slideMargin = 18;
   if (window.matchMedia('(max-width: 480px)').matches) {
-	maxSlides = 1;
-	slideWidth = 300;
-	moveSlides = 1;
-	slideMargin = 0;
-	}
+		maxSlides = 1;
+		slideWidth = 250;
+		moveSlides = 1;
+		slideMargin = 0;
+  }
   var slider1 = $('#tslider').bxSlider({
   maxSlides: maxSlides,
   minSlides: 1,
@@ -54,6 +54,17 @@ $(document).ready(function(){
   hideControlOnEnd: true,
   pager:false,
   });
+  var slider3 = $('#pslider').bxSlider({
+  maxSlides: 1,
+  minSlides: 1,
+  slideWidth: 820,
+  slideMargin: 18,
+  moveSlides: 1,
+  mode: 'horizontal',
+  infiniteLoop: false,
+  hideControlOnEnd: true,
+  pager:false,
+  });
   
     $('.triangle-left').click(function(){
       slider1.goToPrevSlide();
@@ -69,6 +80,14 @@ $(document).ready(function(){
     });
 	 $('.tr-right').click(function(){
       slider2.goToNextSlide();
+      return false;
+    });
+	$('.t-left').click(function(){
+      slider3.goToPrevSlide();
+      return false;
+    });
+	 $('.t-right').click(function(){
+      slider3.goToNextSlide();
       return false;
     });
 });
@@ -115,9 +134,14 @@ $(".age-filter").change(function(){
 		}
 	});
 });
-$('#mobile-dropdown').on('touchstart',function(){
+$('#mobile-dropdown').on('click',function(){
    $('.primary-mobile-nav li').toggle();
     });
+$('.btn-sign').click(function(){
+	$('.sp-popup-outer').removeClass( "sp-hide" );
+	$('.sp-popup-outer').show();
+	
+	});
 /*
 $(".news-filter").change(function(){
 	var val = $( "input[type=checkbox][name=options]:checked").val();
