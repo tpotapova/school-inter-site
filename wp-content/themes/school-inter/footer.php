@@ -41,15 +41,15 @@
 			<ul>
 				<li class="tel-icon"><a href="tel:+79262300599">+7 (926) 230 05 99</a></li>
 				<li class="mail-icon"><a href="mailto:mail@school-inter.net">mail@school-inter.net</a></li>
+				<li class="skype-icon"><a href="skype:school.inter">school.inter</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="row footer-row-social">
 		<div class="col-xs-12 col-md-5 social">
 			<div>Мы в соцсетях</div>
-			<a href="http://web.telegram.org/" class="social-icon telegram"></a>
-			<a href="http://skype.com/" class="social-icon skype"></a>
-			<a href="" class="social-icon whatsup"></a>
+			<a href="https://telegram.me/school-inter" class="social-icon telegram"></a>
+			<a href="https://api.whatsapp.com/send?phone=79262300599" class="social-icon whatsup"></a>
 			<a href="http://facebook.com/school.inter" class="social-icon facebook"></a>
 			<a href="http://vkontakte.ru/school.inter" class="social-icon vkontakte"></a>
 			<a href="http://instagram.com/school_inter/" class="social-icon instagram"></a>
